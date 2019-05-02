@@ -111,12 +111,16 @@
 
         // insert image
         img.addEventListener('click', function(){
-            document.execCommand("insertImage", false, img_link.value);
+            if(img_link.value !== null){
+                document.execCommand("insertImage", false, img_link.value);
+            }
         });
 
         // insert link
         a.addEventListener('click', function(){
-            document.execCommand("CreateLink",true, a_link.value);
+            if(a_link.value !== null){
+                document.execCommand("CreateLink",true, a_link.value);
+            }
         });
         
         // debug 
@@ -138,6 +142,6 @@
             localStorage.removeItem('content');
         });
 
-        console.log(img_link.value);
+        // console.log(img_link.value);
         
 }());
