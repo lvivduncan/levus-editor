@@ -51,6 +51,7 @@
         u.textContent = 'u',
 
         temp.setAttribute('class', 'temp'),
+        temp.setAttribute('title', 'зарезервована кнопка'),
         temp.textContent = 'temp',
 
         area.setAttribute('class', 'area'),
