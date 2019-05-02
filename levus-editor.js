@@ -87,7 +87,7 @@
         // події
 
         // дефолтний розділювач -- параграф
-        document.execCommand("defaultParagraphSeparator", true, "p");
+        document.execCommand("defaultParagraphSeparator", false, "p");
 
         // півжирний
         b.addEventListener('click', function(){
@@ -109,6 +109,16 @@
             document.execCommand("underline");
         }); 
 
+        // insert image
+        img.addEventListener('click', function(){
+            document.execCommand("insertImage", false, img_link.value);
+        });
+
+        // insert link
+        a.addEventListener('click', function(){
+            document.execCommand("CreateLink",true, a_link.value);
+        });
+        
         // debug 
 
         if(localStorage.getItem('content') !== null){
@@ -127,5 +137,7 @@
         clear.addEventListener('click', function(){
             localStorage.removeItem('content');
         });
+
+        console.log(img_link.value);
         
 }());
