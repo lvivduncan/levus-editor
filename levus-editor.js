@@ -69,7 +69,7 @@
 
         // додаємо на сторінку
         document.body.insertAdjacentHTML('afterBegin', style);
-        panel.appendChild(a_link); // document.execCommand("CreateLink",true,'http://яваскрипт.укр/');
+        panel.appendChild(a_link);
         panel.appendChild(a);
         panel.appendChild(b);
         panel.appendChild(i);
@@ -141,7 +141,5 @@
         clear.addEventListener('click', function(){
             localStorage.removeItem('content');
         });
-
-        // console.log(img_link.value);
         
 }());
